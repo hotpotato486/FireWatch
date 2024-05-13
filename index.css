@@ -78,6 +78,23 @@ a {
 	box-sizing: border-box;
 }
 
+.long-text {
+	display: none;
+}
+
+.short-text {
+	display: inline;
+}
+
+@media (min-width: 880px) {
+	.long-text {
+		display: inline;
+	}
+	.short-text {
+		display: none;
+	}
+}
+
 .button-in-header:hover {
     background-color: #127374;
 }
@@ -91,6 +108,8 @@ a {
 }
 
 #image-wrapper {
+	display: flex;
+	justify-content: center;
 	overflow: hidden;
 }
 
@@ -114,10 +133,17 @@ a {
 }
 
 #mountain-tag-wapper {
+	flex-direction: column;
 	font-size: 18px;
 	font-weight: 700;
 	display: flex;
 	gap: 50px;
+}
+
+@media (min-width: 880px) {
+	#mountain-tag-wapper {
+		flex-direction: row;
+	}
 }
 
 .mountain-content-wrapper {
